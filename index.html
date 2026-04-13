@@ -192,14 +192,50 @@
     margin-bottom: 18px;
     text-shadow: 0 2px 20px rgba(0,0,0,0.4);
   }
+  /* ===== VIDEO WINDOW ===== */
+  .video-window {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 36px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 12px 50px rgba(0,0,0,0.55), 0 0 0 2px rgba(245,180,24,0.35);
+    border: 2px solid rgba(255,255,255,0.18);
+    background: #000;
+  }
+  .video-window video {
+    width: 100%;
+    display: block;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  /* ===== JOIN TITLE ===== */
+  .join-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--gold-bright);
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 16px rgba(245,180,24,0.4);
+  }
+
   .hero-subtitle {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     color: rgba(255,255,255,0.88);
     margin-bottom: 40px;
     font-weight: 300;
-    line-height: 1.6;
-    max-width: 600px; margin-left: auto; margin-right: auto;
+    line-height: 1.8;
+    max-width: 720px; margin-left: auto; margin-right: auto;
+    text-align: right;
   }
+  .hero-subtitle p {
+    margin-bottom: 18px;
+    padding-right: 0;
+  }
+  .hero-subtitle p:last-child { margin-bottom: 0; }
 
   /* Hero Stats Box */
   .hero-stats {
@@ -1002,11 +1038,6 @@
       <span>בית הכנסת שלנו</span>
     </div>
     <div class="nav-links">
-      <a href="#story">הסיפור שלנו</a>
-      <a href="#leaderboard">לוח כבוד</a>
-      <a href="#families">שגרירי קמפיין</a>
-      <a href="admin.html">ניהול</a>
-      <a href="#donate" class="nav-donate">תרום עכשיו ✦</a>
     </div>
   </div>
 </nav>
@@ -1026,6 +1057,15 @@
   <div class="hero-content container">
     <div class="hero-badge">✡   בית הכנסת של יחדיו</div>
     <h1 class="font-display">בונים יחדיו</h1>
+
+    <div class="video-window">
+      <video autoplay loop muted playsinline>
+        <source src="images/video3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h2 class="join-title">טופס הצטרפות</h2>
+
     <div class="hero-subtitle">
       <p>בחודשים הקרובים נתחיל את תהליך בניית בית הכנסת.</p>
       <p>אין ספק שמדובר בפרויקט הגדול ביותר של הקהילה, ומושקעים בו המון עבודה, זמן וכסף.</p>
@@ -1049,219 +1089,8 @@
   </div>
 </section>
 
-<!-- ===== STORY ===== -->
-<section id="story">
-  <div class="container">
-    <div class="story-grid">
-      <div class="story-image-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1576016770956-debb63d92058?w=800&q=80"
-          alt="בית הכנסת שלנו"
-          loading="lazy"
-        >
-        <div class="story-badge-img">
-          <span>40+</span>
-          <span>שנות</span>
-          <span>קהילה</span>
-        </div>
-      </div>
-      <div class="story-text">
-        <div class="section-tag">הסיפור שלנו</div>
-        <h2 class="font-display">למה אנחנו בונים?</h2>
-        <p>
-          <strong>קהילתנו גדלה.</strong> מה שהחל כמניין קטן של שלושים משפחות, גדל היום לקהילה תוססת של מאות משפחות — ועדיין אין לנו בית קבוע משלנו.
-        </p>
-        <p>
-          כל שבת, כל חג, כל שמחה — אנחנו שוכרים אולמות, מעמיסים ציוד, ומגיעים לפני כולם. הגיע הזמן שיהיה לנו <strong>בית אמיתי</strong> — מקום קדוש שיחכה לנו תמיד.
-        </p>
-        <p>
-          הבניין החדש יכלול: עזרת גברים ונשים מרווחת, חדרי לימוד, גן ילדים, וטרקלין קהילתי. מקום שהדורות הבאים יגדלו בו.
-        </p>
-        <div class="story-pillars">
-          <div class="pillar">
-            <span class="pillar-icon">🕍</span>
-            <div class="pillar-text">
-              <strong>עזרת תפילה</strong>
-              <span>300 מקומות ישיבה</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">📚</span>
-            <div class="pillar-text">
-              <strong>בית מדרש</strong>
-              <span>לימוד ותורה</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">👨‍👩‍👧‍👦</span>
-            <div class="pillar-text">
-              <strong>מרכז קהילתי</strong>
-              <span>לכל אירוע</span>
-            </div>
-          </div>
-          <div class="pillar">
-            <span class="pillar-icon">🌱</span>
-            <div class="pillar-text">
-              <strong>גן ילדים</strong>
-              <span>חינוך לדורות</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== MILESTONES ===== -->
-<section style="background:var(--off-white);padding:60px 0;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">אבני דרך</div>
-      <h2 class="font-display">מה כבר השגנו</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="milestones-row" id="milestones-row">
-      <div class="milestone-step" data-pct="25">
-        <div class="ms-icon">🌱</div>
-        <div class="ms-pct">25%</div>
-        <div class="ms-label">תשתית</div>
-      </div>
-      <div class="milestone-step" data-pct="50">
-        <div class="ms-icon">🏗️</div>
-        <div class="ms-pct">50%</div>
-        <div class="ms-label">בנייה</div>
-      </div>
-      <div class="milestone-step" data-pct="75">
-        <div class="ms-icon">🏛️</div>
-        <div class="ms-pct">75%</div>
-        <div class="ms-label">גמר</div>
-      </div>
-      <div class="milestone-step" data-pct="100">
-        <div class="ms-icon">✡️</div>
-        <div class="ms-pct">100%</div>
-        <div class="ms-label">חנוכת הבית!</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== MATCHING TOGGLE ===== -->
-<div id="matching-toggle-section">
-  <div class="container matching-inner">
-    <div class="matching-text">
-      <h3>מצב כפל תרומות</h3>
-      <p>כשמופעל, כל תרומה מוכפלת על ידי תורם אנונימי</p>
-    </div>
-    <label class="toggle-switch">
-      <input type="checkbox" id="matching-toggle" onchange="toggleMatching(this.checked)">
-      <div class="toggle-slider"></div>
-    </label>
-  </div>
-</div>
-
-<!-- ===== DONATE ===== -->
-<section id="donate">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">תרומה</div>
-      <h2 class="font-display">תרמו עכשיו</h2>
-      <p>כל שקל מקרב אותנו לחלום. תרומתכם בונה עתיד.</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="donation-card">
-      <div class="donation-header">
-        <h3 class="font-display">בחרו סכום תרומה</h3>
-        <p>תרומות מוכרות לצרכי מס | SSL מאובטח</p>
-        <span id="matching-active-label">✦ כל תרומה מוכפלת!</span>
-      </div>
-      <div class="donation-body">
-        <div class="amount-label">סכום תרומה (₪)</div>
-        <div class="amount-presets" id="amount-presets">
-          <button class="amount-btn" data-amount="180" onclick="selectAmount(180, this)">
-            ₪180
-            <span class="multiplied">×2 = ₪360</span>
-          </button>
-          <button class="amount-btn selected" data-amount="360" onclick="selectAmount(360, this)">
-            ₪360
-            <span class="multiplied">×2 = ₪720</span>
-          </button>
-          <button class="amount-btn" data-amount="1000" onclick="selectAmount(1000, this)">
-            ₪1,000
-            <span class="multiplied">×2 = ₪2,000</span>
-          </button>
-          <button class="amount-btn" data-amount="5000" onclick="selectAmount(5000, this)">
-            ₪5,000
-            <span class="multiplied">×2 = ₪10,000</span>
-          </button>
-        </div>
-        <div class="custom-amount-wrap">
-          <input
-            type="number"
-            id="custom-amount"
-            placeholder="סכום אחר (הכנס ידנית)"
-            min="10"
-            oninput="onCustomAmount(this.value)"
-          >
-          <span class="currency">₪</span>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>שם מלא</label>
-            <input type="text" id="donor-name" placeholder="ישראל ישראלי">
-          </div>
-          <div class="form-group">
-            <label>טלפון / אימייל</label>
-            <input type="text" id="donor-contact" placeholder="050-0000000">
-          </div>
-        </div>
-        <div class="form-group" style="margin-bottom:20px">
-          <label>הקדשה / לזכות מי (אופציונלי)</label>
-          <textarea id="donor-dedication" placeholder="לעילוי נשמת... / לרפואת... / לכבוד משפחת..."></textarea>
-        </div>
-
-        <div class="donate-total-display">
-          <span class="total-label" id="total-label-text">סכום תרומה:</span>
-          <span class="total-amount" id="donate-total-display">₪360</span>
-        </div>
-
-        <button class="donate-submit-btn" onclick="submitDonation()">
-          ✦ תרום ₪<span id="donate-btn-amount">360</span> עכשיו
-        </button>
-        <div class="security-note">
-          🔒 תשלום מאובטח | אתר זה הוא הדגמה בלבד — אין חיוב אמיתי
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FAMILIES ===== -->
-<section id="families">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">שגרירי קמפיין</div>
-      <h2 class="font-display">משפחות שמובילות את הדרך</h2>
-      <p>כל משפחה לוקחת על עצמה יעד אישי ומגייסת לקמפיין. הצטרפו לאחת מהן!</p>
-      <div class="divider"></div>
-    </div>
-    <div class="families-grid" id="families-grid"></div>
-  </div>
-</section>
-
-<!-- ===== LEADERBOARD ===== -->
-<section id="leaderboard">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">לוח כבוד</div>
-      <h2 class="font-display">מי בראש הטבלה?</h2>
-      <p>הוקרה למשפחות שמובילות את המאמץ הגדול</p>
-      <div class="divider"></div>
-    </div>
-    <div class="leaderboard-list" id="leaderboard-list"></div>
-  </div>
-</section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -1269,11 +1098,7 @@
   <p>קמפיין לבניית בית קהילה לדורות</p>
   <p style="margin-top:8px;font-size:0.8rem;opacity:0.5">אתר זה הוא הדגמה טכנית. כל פרטי התשלום הם לצורכי תצוגה בלבד.</p>
   <div class="footer-links">
-    <a href="#story">הסיפור שלנו</a>
-    <a href="#donate">תרומה</a>
-    <a href="#leaderboard">לוח כבוד</a>
     <a href="family.html?id=1">דוגמת דף משפחה</a>
-    <a href="admin.html">ניהול</a>
   </div>
 </footer>
 
@@ -1311,18 +1136,6 @@
   </div>
 </div>
 
-<!-- ===== STICKY DONATE ===== -->
-<div id="sticky-donate">
-  <div class="sticky-inner">
-    <div class="amount-live">
-      סה"כ גויס: <strong id="sticky-raised">₪0</strong>
-    </div>
-    <button class="sticky-btn" onclick="document.getElementById('donate').scrollIntoView({behavior:'smooth'})">
-      תרום עכשיו ✦
-    </button>
-    <button style="color:rgba(255,255,255,0.5);font-size:1.2rem;margin-right:4px;" onclick="openShare()">↗</button>
-  </div>
-</div>
 
 <!-- ===== MILESTONE TOAST ===== -->
 <div class="milestone-toast" id="milestone-toast"></div>
