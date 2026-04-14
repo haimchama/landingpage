@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uipro init:*)",
+      "Bash(uipro:*)"
+    ]
+  }
+}
