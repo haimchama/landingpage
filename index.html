@@ -166,16 +166,15 @@
     position: relative;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
+    background: #F0924A;
   }
   .hero-bg {
     position: absolute;
-    inset: 50px 60px;
-    border-radius: 28px;
+    inset: 0;
     background:
       linear-gradient(to bottom, rgba(10,25,58,0.75) 0%, rgba(10,25,58,0.6) 50%, rgba(10,25,58,0.88) 100%),
-      url('images/image6.png') center/cover no-repeat;
+      url('images/image6.png') center/75% auto no-repeat;
     animation: heroZoom 20s ease-in-out infinite alternate;
-    box-shadow: 0 20px 60px rgba(13,43,94,0.35);
   }
   @keyframes heroZoom {
     from { transform: scale(1); }
