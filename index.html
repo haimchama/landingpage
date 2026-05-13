@@ -140,6 +140,9 @@
     border-radius: var(--radius-pill) !important;
   }
   .nav-donate:hover { background: white !important; }
+  .lang-switcher{display:flex;align-items:center;gap:3px}
+  .lang-btn{padding:5px 9px;border-radius:20px;font-size:.75rem;font-weight:700;color:rgba(255,255,255,0.7);transition:all .2s;border:1px solid transparent;white-space:nowrap}
+  .lang-btn:hover,.lang-btn.active{background:var(--gold-bright);color:var(--blue-deep);border-color:var(--gold-bright)}
   /* ===== LOGO 3D ===== */
   @keyframes spin3d {
     from { transform: scale(1.0) rotateY(0deg); }
@@ -1480,6 +1483,11 @@
       <a href="#faq">שאלות ותשובות</a>
       <a href="#gallery">הדמיות</a>
       <img src="images/LOGOYACH.jpeg" alt="לוגו" class="nav-logotr">
+      <div class="lang-switcher">
+        <a href="/index.html" class="lang-btn active">🇮🇱 עב</a>
+        <a href="/en/index.html" class="lang-btn">🇺🇸 EN</a>
+        <a href="/es/index.html" class="lang-btn">🇪🇸 ES</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -2065,7 +2073,7 @@ function renderFamilies() {
               <span>יעד: ₪${f.goal.toLocaleString('he-IL')}</span>
             </div>
           </div>
-          <a class="family-card-btn" href="family.html?id=${f.id}">לדף המשפחה ←</a>
+          <a class="family-card-btn" href="https://donate.yachdavmy-home.com/donate.html">לתרומה ←</a>
         </div>
       </div>
     `;
@@ -2073,7 +2081,7 @@ function renderFamilies() {
 }
 
 function goToFamily(id) {
-  window.location.href = `family.html?id=${id}`;
+  window.location.href = 'https://donate.yachdavmy-home.com/donate.html';
 }
 
 // =============================================
