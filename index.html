@@ -90,13 +90,14 @@
 
   /* ===== NAV ===== */
   #navbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    transition: background 0.10s, box-shadow 0.10s;
+    /* position: fixed; top: 0; left: 0; right: 0; z-index: 1000; */
+    /* transition: background 0.10s, box-shadow 0.10s; */
     padding: 0 20px;
-    96 +    overflow: visible;                     
+    background: transparent;
+    /* 96 +    overflow: visible;                      */
   }
   #navbar.scrolled {
-    background: var(--blue-deep);
+    /* background: var(--blue-deep); */
     box-shadow: 0 2px 20px rgba(0,0,0,0.3);
   }
   .nav-inner {
@@ -273,7 +274,7 @@
     text-align: center;
     color: white;
     max-width: 860px;
-    padding: 120px 20px 60px;
+    /* padding: 120px 20px 60px; */
     animation: fadeUp 1s ease-out both;
   }
   @keyframes fadeUp {
@@ -1470,27 +1471,6 @@
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <div class="nav-logo3d-wrap">
-        <img src="images/logo3d.png" alt="לוגו" class="nav-logo3d">
-      </div>
-    </div>
-    <div class="nav-links">
-      <a href="#timeline">לוח זמנים</a>
-      <a href="#faq">שאלות ותשובות</a>
-      <a href="#gallery">הדמיות</a>
-      <img src="images/LOGOYACH.jpeg" alt="לוגו" class="nav-logotr">
-      <div class="lang-switcher">
-        <a href="/index.html" class="lang-btn active">🇮🇱 עב</a>
-        <a href="/en/index.html" class="lang-btn">🇺🇸 EN</a>
-        <a href="/es/index.html" class="lang-btn">🇪🇸 ES</a>
-      </div>
-    </div>
-  </div>
-</nav>
 
 <!-- ===== MATCHING BANNER ===== -->
 <div id="matching-banner">
@@ -1515,13 +1495,27 @@
   <div class="hero-content container">
 
 
-    <div class="video-window">
-      <img src="images/image3.jpeg" alt="בית הכנסת" style="width:100%;display:block;max-height:420px;object-fit:cover;">
-    </div>
-
-    <h2 class="join-title">טופס הצטרפות</h2>
 
     <div class="hero-subtitle">
+      <!-- ===== NAVBAR ===== -->
+      <nav id="navbar">
+        <div class="nav-inner">
+          <div class="nav-logo">
+            <div class="nav-logo3d-wrap">
+              <img src="images/logo3d.png" alt="לוגו" class="nav-logo3d">
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#timeline">לוח זמנים</a>
+            <a href="#faq">שאלות ותשובות</a>
+            <a href="#gallery">הדמיות</a>
+
+          </div>
+        </div>
+      </nav>
+    <h1 class="join-title"> קהילת יחדיו</h1>
+    <h2 class="join-title">טופס הצטרפות</h2>
+
       <p>בחודשים הקרובים נתחיל את תהליך בניית בית הכנסת.</p>
       <p>אין ספק שמדובר בפרויקט הגדול ביותר של הקהילה, ומושקעים בו המון עבודה, זמן וכסף.</p>
       <p>ברוך ה׳ הגענו לשלב בו אנחנו צריכים לקבל החלטות לגבי גודל המבנה והתכנון האדריכלי של בית הכנסת, ולכן חשוב לנו לדעת מי מחברי הקהילה מתכנן להיות איתנו ולהירתם למשימה (בתקווה שמדובר בכולם).</p>
@@ -1531,6 +1525,10 @@
       <p>חשוב לציין שמשפחות שיצטרפו, יבטיחו לעצמן זכויות שונות בבית הכנסת החדש.</p>
       <p>כך למשל משפחות רשומות יוכלו להיות בטוחות שתמיד יהיה להן מקום בבית הכנסת שהן עצמן סייעו להקים, גם בחגים או במקרה שבית הכנסת לא יוכל להכיל את כל המתפללים שיבקשו להגיע מדי שבת.</p>
       <p>משפחות שמעוניינות להצטרף אך זקוקות לסיוע בנושא הכספי מוזמנות לפנות לאסף וולמן באופן פרטי.</p>
+    </div>
+
+    <div class="video-window">
+      <img src="images/image3.jpeg" alt="בית הכנסת" style="width:100%;display:block;max-height:420px;object-fit:cover;">
     </div>
 
     <div class="hero-cta-row">
